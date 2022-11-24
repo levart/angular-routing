@@ -1,0 +1,24 @@
+<div>
+  <button (click)="login()">Login</button>
+  <button (click)="logout()">Logout</button>
+
+  {{authService.isAuthenticated}}
+</div>
+<div class="container">
+  <div>
+    <ul>
+      <li>
+        <a [routerLink]="['/']">Home</a>
+      </li>
+      <li>
+        <a [routerLink]="['/','about']">About</a>
+      </li>
+      <li>
+        <a routerLink="/news">News</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
